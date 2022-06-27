@@ -4,19 +4,24 @@
 
 // var let const
 // New 
-const num = ['Sasha', 'Olha', 'Sveta'];
+const userNameList = ['Sasha', 'Olha', 'Sveta'];
 let a = 2;
 let b = 2;
 let res = a + b;
 
 
-let test = ['Sasha', 'Olha', 'Sveta']
+
+let test = [
+    { name: "sasha", age: 18, },
+    { name: "Olha", age: 22, },
+    { name: "Sveta", age: 35, }
+]
 
 //alert('test')
 
 //document.write('doc write')
 
-console.log(a)
+console.log(test)
 
 document.querySelector('.out').innerHTML = test;
 // window.addEventListener("load", function (event) {
