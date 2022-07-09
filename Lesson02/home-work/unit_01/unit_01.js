@@ -42,7 +42,8 @@ console.log('пишем тут');
 //<h2>Hello <span class="out-8">everyone</span></h2>
 // Замените с помощью querySelector текст внутри span на 'world'.
 // Т.е. результат должен выглядеть <h2>Hello <span class="out-8">world</span></h2>
-
+let out123 = document.querySelector('.out-8');
+console.log(out123);
 
 
 // Task 10.
