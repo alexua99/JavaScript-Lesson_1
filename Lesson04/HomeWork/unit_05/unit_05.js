@@ -123,13 +123,17 @@ document.querySelector('.b-8').onclick = t8;
 // По нажатию кнопки .b-9 должна запускаться функция t9, которая выводит в .out-9 числа от меньшего введенного до большего включительно, с шагом 1.
 // Разделитель - подчеркивание. Если пользователь ввел 4 и 8  и нажал кнопку, мы получим:
 // 4_5_6_7_8_
-// если ввел 8 и 6, то получим
+// если ввел a = 8 и b = 6, то получим
 // 6_7_8_
 // Задача решается с помощью цикла. Подсказка - вначале делаем проверку, а потом запускаем цикл.
 // цикл - один
 
 function t9() {
+    if (a < b) {
+        ///??
+    } else {
 
+    }
 }
 
 document.querySelector('.b-9').onclick = t9;
@@ -155,7 +159,13 @@ document.querySelector('.b-10').onclick = t10;
 
 
 function t11() {
+    let divs = document.querySelectorAll('.div-11');
+    let res = '';
 
+    for (let i = 0; i < divs.length; i++) {
+        res += divs[i].innerHTML + '_'
+    }
+    document.querySelector('.out-11').innerHTML = res
 }
 
 document.querySelector('.b-11').onclick = t11;

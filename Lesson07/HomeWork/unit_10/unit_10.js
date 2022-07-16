@@ -231,7 +231,7 @@ document.querySelector('.b-16').onclick = f16;
 // Вывод в out-17
 
 let ar17 = [3, 0, 2, 6, 0, 1, 3, 1, 9, 0, 2, 0];
-
+console.log(ar17);
 function f17() {
 
 }
