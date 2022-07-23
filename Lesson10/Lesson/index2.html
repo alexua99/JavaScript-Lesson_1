@@ -22,12 +22,17 @@
         let btn = document.querySelector('.btn');
         let out = document.querySelector('.out');
 
-        function isDesktop() {
+        function isDesktop(a) {
             window.addEventListener('resize', function () {
                 out.innerHTML = "Розмір: " + window.innerWidth + "px";
-                if (window.innerWidth > 991) { return true }
+                if (window.innerWidth > a) { return true }
+                else { return false }
             })
         }
+
+        isDesktop(1200)
+
+
 
 
     </script>
