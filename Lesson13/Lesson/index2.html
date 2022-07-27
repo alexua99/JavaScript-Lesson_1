@@ -1,0 +1,71 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .movei__img {
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="movei">
+        <input type="text">
+        <button>serch</button>
+        <select name="" id="">
+
+        </select>
+        <div class="movei__container">
+
+
+        </div>
+    </section>
+
+
+    <script>
+
+
+        const options = {
+            method: 'GET',
+            headers: {
+                'X-RapidAPI-Key': 'f6925c2f58mshd79ab8d01fe62e1p159e97jsn7530ec49276d',
+                'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
+            }
+        };
+
+        fetch('https://free-to-play-games-database.p.rapidapi.com/api/games', options)
+            .then(response => response.json())
+            .then(response => allGames(response))
+            .catch(err => console.error(err));
+
+
+        let out = document.querySelector('.movei__container')
+        function allGames(data) {
+            console.log(data);
+
+
+            for (let i = 0; i < 10; i++) {
+                let img = document.createElement('img')
+                img.setAttribute('src', `${data[i].thumbnail}`)
+                img.classList.add('movei__img')
+                img.addEventListener('click', () => {
+                    console.log(data[i].developer);
+                })
+                out.appendChild(img)
+            }
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

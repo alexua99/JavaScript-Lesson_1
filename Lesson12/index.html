@@ -1,0 +1,121 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        .red {
+            background: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <p class="p1">
+            <span>
+                sasha
+            </span>
+        </p>
+        <p class="p1"> <span>
+                sasha
+            </span>
+        </p>
+        <p class="p1"> <span>
+                sasha
+            </span>
+        </p>
+        <p class="p1"> <span>
+                sasha
+            </span>
+        </p>
+        <p class="p1"> <span>
+                sasha
+            </span>
+        </p>
+        <p class="p1"> <span>
+                sasha
+            </span>
+        </p>
+        <p class="p1">test</p>
+        <p class="p1">test</p>
+        <p class="p1">test</p>
+        <p class="p1">test</p>
+        <p class="p1">test</p>
+        <p class="p1">test</p>
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+        $('.p1')
+        document.querySelectorAll('.p1').forEach((value, index, array) => { })
+
+
+        //$('.p1').css('border', '1px solid red')
+        //$('.p1:has(span)').css('border', '1px solid red')
+
+        // :first :last :eq(1) :has(span)
+
+
+        // $((function () { }))
+        $(document).ready(function () {
+            console.log("DOM fully loaded and parsed");
+        })
+        /// Прямий аналог 
+        document.addEventListener("DOMContentLoaded", function () {
+            console.log("DOM fully loaded and parsed");
+        });
+
+
+        //////
+        $('.p1').click(function () {
+            $(this).toggleClass('red')
+        })
+        /// Прямий аналог
+        let p1 = document.querySelectorAll('.p1')
+
+        for (let i = 0; i < p1.length; i++) {
+            p1[i].onclick = function () {
+                this.classList.toggle('red')
+            }
+        }
+        /////
+
+        //form 
+        $('.inp').focus(() => {
+            console.log("test");
+
+        })
+
+        $('.inp').change(function () {
+            $('.out').text($(this).val())
+        })
+
+        let a = 10
+
+        console.log(`benen = ${a}`);
+
+        $('.inp').keypress(function () {
+            $('.out').text($(this).val())
+        })
+
+        $('.inp2').attr('type') // getAtribute
+        console.log($('.inp2').attr('type'));
+
+        $('.inp2').click(function () {
+            $(this).attr('type', 'text')
+        })
+
+
+
+    </script>
+</body>
+
+</html>
